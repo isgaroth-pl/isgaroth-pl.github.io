@@ -1,7 +1,47 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages, bitchess.</p>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Three.js Basics Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,700&family=Space+Mono&display=swap" rel="stylesheet"> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      #app {
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #2c3e50;
+        margin: 0px;
+      }
+      body {
+        -webkit-font-smoothing: antialiased;
+      }
+      .font-exo {
+        font-family: 'Exo 2', sans-serif;
+      }
+      .font-space-mono {
+        font-family: 'Space Mono', monospace;
+      }
+      </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class = "absolute text-white text-center"
+           style = "top: 35%; transform: translate(-50%, 50%); left: 50%;">
+        <h1 class="font-space-mono text-m uppercase tracking-wide">Maciek Wolak</h1>
+        <p class="font-exo text-4xl">MY GITHUB PAGE, BITCHES</p>
+        <a href="https://google.pl"
+        class="border px-4 py-2 rounded-lg text-sm font-space-mono uppercase mt-6 
+        hover:bg-white hover:text-gray-800 inline-block">
+        View Work
+        </a>
+      </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
 </html>
