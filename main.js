@@ -1,11 +1,11 @@
 //import './style.css'
 console.log('starting app')
 
-    import * as THREE from './node_modules/three/build/three.module.js';
-    import { OrbitControls } from './node_modules/three/examples/jsm/controls/OrbitControls.js';
-    import * as DATGUI from './node_modules/dat.gui/build/dat.gui.module.js';
-    import STATS from './node_modules/three/examples/jsm/libs/stats.module.js';
-    import GSAP from './node_modules/gsap/gsap-core.js';
+    import * as THREE from './libs/three.module.js';
+    import { OrbitControls } from './libs/OrbitControls.js';
+    import * as DATGUI from './libs/dat.gui.module.js';
+    import STATS from './libs/stats.module.js';
+    import GSAP from './libs/gsap-core.js';
 
     let scene, camera, raycaster, renderer;
     let gui, stats, container;
