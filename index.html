@@ -1,47 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Three.js Basics Project</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,700&family=Space+Mono&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,700&family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      #app {
-        font-family: Avenir, Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
-        margin: 0px;
-      }
-      body {
-        -webkit-font-smoothing: antialiased;
-      }
-      .font-exo {
-        font-family: 'Exo 2', sans-serif;
-      }
-      .font-space-mono {
-        font-family: 'Space Mono', monospace;
-      }
-      </style>
-  </head>
-  <body>
-    <div id="app">
-      <div class = "absolute text-white text-center"
-           style = "top: 35%; transform: translate(-50%, 50%); left: 50%;">
-        <h1 class="font-space-mono text-m uppercase tracking-wide">Maciek Wolak</h1>
-        <p class="font-exo text-4xl">MY GITHUB PAGE, BITCHES</p>
-        <a href="https://google.pl"
-        class="border px-4 py-2 rounded-lg text-sm font-space-mono uppercase mt-6 
-        hover:bg-white hover:text-gray-800 inline-block">
-        View Work
-        </a>
-      </div>
+</head>
+
+
+<body>
+
+    <div id="background-canvas">
+        <!-- This is the background div for the Three.js -->
     </div>
+
+    <div id="main-content">
+        <div class="text-white text-center mt-48">
+            <h1 class="text-style-one text-m tracking-wide">Maciek Wolak</h1>
+            <p class="text-style-two text-4xl">MY GITHUB PAGE, BITCHES</p>
+            <a href="https://google.pl" 
+               class="border px-4 py-2 rounded-lg text-sm text-style-one mt-6 hover:bg-white hover:text-gray-800 inline-block">
+                View Work
+            </a>
+        </div>
+    
+        <div id="projects" class="mt-12">
+            <h2 class="text-style-one text-m tracking-wide">My Projects</h2>
+            <div class="mb-8">
+                <img src="path_to_gif_or_image1" alt="Description of project 1" class="w-full mb-4">
+                <p class="text-style-two text-lg">Description for project 1...</p>
+            </div>
+            <!-- Add more project entries similarly -->
+        </div>
+    
+        <div id="contact" class="mt-12">
+            <h2 class="text-style-one text-m tracking-wide">Contact Me</h2>
+            <p class="text-style-two text-lg">You can reach me at: [your-email@example.com]</p>
+            <!-- Add other contact details or an about section here -->
+        </div>
+    </div>
+    
+    <div id="navbar-bottom" class="bg-gray-800 p-4 text-white">
+        <nav class="flex justify-around">
+            <a href="#" class="text-style-two hover:underline">Home</a>
+            <a href="#projects" class="text-style-two hover:underline">My Projects</a>
+            <a href="#contact" class="text-style-two hover:underline">Contact</a>
+            <button id="toggleZIndex" class="text-style-two p-2 rounded">Hide Text</button>
+        </nav>
+    </div>
+    
+
     <script type="module" src="./main.js"></script>
-  </body>
+    <script>
+        const mainContent = document.getElementById("main-content");
+        const toggleZIndexButton = document.getElementById("toggleZIndex");
+
+        function updateButtonText() {
+            if (getComputedStyle(mainContent).zIndex === "1") {
+                toggleZIndexButton.textContent = "Hide Text";
+            } else {
+                toggleZIndexButton.textContent = "Show Text";
+            }
+        }
+
+        toggleZIndexButton.addEventListener('click', function() {
+            if (getComputedStyle(mainContent).zIndex === "1") {
+                mainContent.style.zIndex = "-2";
+            } else {
+                mainContent.style.zIndex = "1";
+            }
+            updateButtonText();
+        });
+
+        updateButtonText();
+    </script>
+    
+</body>
+
 </html>
