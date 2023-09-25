@@ -7,7 +7,7 @@ const guiWorld = {
 };
 
 const pointer = new THREE.Vector2();
-const defaultColor = new THREE.Vector3(0.3, 0.3, 0.3);
+const defaultColor = new THREE.Vector3(0.1, 0.3, 0.4);
 const highlightColor = new THREE.Vector3(0.1, 0.5, 1);
 const gainLerpFactor = 0.15;  // factor for gaining color; adjust this for faster/slower color transition
 const decayLerpFactor = 0.005;  // factor for decaying color; adjust this for faster/slower color transition
@@ -61,7 +61,7 @@ function animate() {
 }
 
 function createDirectionalLight(x, y, z) {
-  const light = new THREE.DirectionalLight(0x404040, 3);
+  const light = new THREE.DirectionalLight(0x404040, 5);
   light.position.set(x, y, z);
   return light;
 }
