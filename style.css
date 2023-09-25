@@ -49,7 +49,7 @@ body {
     background-color: rgba(128, 128, 128, 0.8); /* Semi-transparent background for better visibility */
 }
 
-.text-style-one {
+.stylish {
     font-family: 'Space Mono', monospace;
     text-transform: uppercase;
     letter-spacing: 0.05em;

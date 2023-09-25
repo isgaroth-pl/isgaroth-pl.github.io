@@ -22,16 +22,18 @@
 
     <div id="main-content">
         <div class="text-white text-center mt-48">
-            <h1 class="text-style-one text-m tracking-wide">Maciek Wolak</h1>
-            <p class="text-style-two text-4xl">MY GITHUB PAGE, BITCHES</p>
-            <a href="https://google.pl" 
-               class="border px-4 py-2 rounded-lg text-sm text-style-one mt-6 hover:bg-white hover:text-gray-800 inline-block">
-                View Work
+            <h1 class="stylish text-m tracking-wide" data-value="MACIEK WOLAK">WOLAK MACIEK</h1>
+            <p class="text-style-two text-4xl">MY GITHUB PAGE</p>
+            <a  id="buttonText"
+                href="https://google.pl" 
+                class="border px-4 py-2 rounded-lg text-sm stylish mt-6 hover:bg-white hover:text-gray-800 inline-block"
+                data-value="VIEW WORK">
+                VIEW WORK
             </a>
         </div>
     
         <div id="projects" class="mt-12">
-            <h2 class="text-style-one text-m tracking-wide">My Projects</h2>
+            <h2 class="stylish text-m tracking-wide">My Projects</h2>
             <div class="mb-8">
                 <img src="path_to_gif_or_image1" alt="Description of project 1" class="w-full mb-4">
                 <p class="text-style-two text-lg">Description for project 1...</p>
@@ -40,7 +42,7 @@
         </div>
     
         <div id="contact" class="mt-12">
-            <h2 class="text-style-one text-m tracking-wide">Contact Me</h2>
+            <h2 class="stylish text-m tracking-wide">Contact Me</h2>
             <p class="text-style-two text-lg">You can reach me at: [your-email@example.com]</p>
             <!-- Add other contact details or an about section here -->
         </div>
@@ -48,9 +50,9 @@
     
     <div id="navbar-bottom" class="bg-gray-800 p-4 text-white">
         <nav class="flex justify-around">
-            <a href="#" class="text-style-two hover:underline">Home</a>
-            <a href="#projects" class="text-style-two hover:underline">My Projects</a>
-            <a href="#contact" class="text-style-two hover:underline">Contact</a>
+            <a href="#" class="text-style-two" data-value="HOME">HOME</a>
+            <a href="#projects" class="text-style-two" data-value="MY PROJECTS">MY PROJECTS</a>
+            <a href="#contact" class="text-style-two" data-value="CONTACT">CONTACT</a>
             <button id="toggleZIndex" class="text-style-two p-2 rounded">Hide Text</button>
         </nav>
     </div>
@@ -79,6 +81,61 @@
         });
 
         updateButtonText();
+
+        const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        
+        let intervalIsSet = false;
+
+        document.querySelector("a").onmouseover = event => {
+            addTextChanging(event);   
+        }
+
+        document.querySelector("h1").onmouseover = event => {
+            addTextChanging(event);   
+        }
+
+        const navLinks = document.querySelectorAll("#navbar-bottom a");
+
+        navLinks.forEach(link => {
+            link.addEventListener('mouseover', event => {
+                addTextChanging(event);
+            });
+        });
+
+        function addTextChanging(event)
+        {
+            if(intervalIsSet) return;
+
+            intervalIsSet = true;
+
+            let iterations = 0;
+
+            const interval = setInterval(() => {
+            event.target.innerText = event.target.innerText.split("")
+            .map((letter,index) => {
+                if(index <= iterations)
+                {
+                    return event.target.dataset.value[index];
+                }
+
+                return letters[Math.floor(Math.random() * 26)]
+            })
+            .join("");
+
+            iterations += 1/2;
+
+            if(iterations >= event.target.dataset.value.length)
+            {
+                clearInterval(interval);
+                intervalIsSet = false;
+                iterations = 0;
+            };
+
+            }, 30);
+
+            
+        }
+
     </script>
     
 </body>
