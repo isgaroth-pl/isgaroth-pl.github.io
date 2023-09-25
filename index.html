@@ -5,14 +5,12 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Three.js Basics Project</title>
+    <title>Maciek Wolak</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,700&family=Space+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
 
 <body>
 
@@ -21,123 +19,76 @@
     </div>
 
     <div id="main-content">
-        <div class="text-white text-center mt-48">
-            <h1 class="stylish text-m tracking-wide" data-value="MACIEK WOLAK">WOLAK MACIEK</h1>
-            <p class="text-style-two text-4xl">MY GITHUB PAGE</p>
-            <a  id="buttonText"
-                href="https://google.pl" 
-                class="border px-4 py-2 rounded-lg text-sm stylish mt-6 hover:bg-white hover:text-gray-800 inline-block"
-                data-value="VIEW WORK">
-                VIEW WORK
-            </a>
+        <div class="stylish text-center mg-top-small">
+            <h1 class="big-text" data-value="MY PORTFOLIO">MY PORTFOLIO</h1>
+            <img src="./Assets/portret-img.png" 
+                alt="Description of project 1" 
+                class="portret-img">  
+            <h2 class="medium-text" data-value="MACIEK WOLAK"> WOLAK MACIEK</h2>                 
         </div>
-    
-        <div id="projects" class="mt-12">
-            <h2 class="stylish text-m tracking-wide">My Projects</h2>
-            <div class="mb-8">
-                <img src="path_to_gif_or_image1" alt="Description of project 1" class="w-full mb-4">
-                <p class="text-style-two text-lg">Description for project 1...</p>
+
+        <div id="projects" class="mg-top-big stylish">
+            <h1 data-value="---My Projects---">---My Projects---</h1>
+
+            <h2 class="mg-top-small stylish" 
+                data-value="First Project">First Project</h2>
+            <div>
+                <img src="./Assets/test-img.png" 
+                    alt="Description of project 2" 
+                    class="project-img">
+                <video autoplay loop muted playsinline>
+                    <source src="Assets/test-video.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video> 
+                <p class="description-text mg-bottom-small">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                    in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
             </div>
-            <!-- Add more project entries similarly -->
+
+            <h2 class="mg-top-small stylish" 
+                data-value="Second Project">Second Project</h2>
+            <div>
+                <img src="./Assets/test-img.png" 
+                alt="Description of project 2" 
+                class="project-img">
+                <p class="description-text mg-bottom-small">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                    in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                </p>
+            </div>
         </div>
-    
-        <div id="contact" class="mt-12">
-            <h2 class="stylish text-m tracking-wide">Contact Me</h2>
-            <p class="text-style-two text-lg">You can reach me at: [your-email@example.com]</p>
-            <!-- Add other contact details or an about section here -->
+
+        <div id="contact" class="mg-top-big stylish">
+            <h2 data-value="Contact Me">Contact Me</h2>
+            <p>You can reach me at: [your-email@example.com]</p>
         </div>
     </div>
-    
-    <div id="navbar-bottom" class="bg-gray-800 p-4 text-white">
+
+    <div id="navbar-bottom" class="bg p-4">
         <nav class="flex justify-around">
-            <a href="#" class="text-style-two" data-value="HOME">HOME</a>
-            <a href="#projects" class="text-style-two" data-value="MY PROJECTS">MY PROJECTS</a>
-            <a href="#contact" class="text-style-two" data-value="CONTACT">CONTACT</a>
-            <button id="toggleZIndex" class="text-style-two p-2 rounded">Hide Text</button>
+            <a href="#" class="stylish" data-value="HOME">HOME</a>
+            <a href="#projects" class="stylish" 
+                data-value="MY PROJECTS">MY PROJECTS</a>
+            <a href="#contact" class="stylish" data-value="CONTACT">CONTACT</a>
+            <button id="toggleZIndex">Hide Text</button>
+            <a href="index-pl.html" title="Change to Polish">
+                <img src="./Assets/polish-flag.png" alt="Polish Flag" class="flag-icon">
+            </a>
         </nav>
     </div>
-    
 
     <script type="module" src="./main.js"></script>
-    <script>
-        const mainContent = document.getElementById("main-content");
-        const toggleZIndexButton = document.getElementById("toggleZIndex");
-
-        function updateButtonText() {
-            if (getComputedStyle(mainContent).zIndex === "1") {
-                toggleZIndexButton.textContent = "Hide Text";
-            } else {
-                toggleZIndexButton.textContent = "Show Text";
-            }
-        }
-
-        toggleZIndexButton.addEventListener('click', function() {
-            if (getComputedStyle(mainContent).zIndex === "1") {
-                mainContent.style.zIndex = "-2";
-            } else {
-                mainContent.style.zIndex = "1";
-            }
-            updateButtonText();
-        });
-
-        updateButtonText();
-
-        const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        
-        let intervalIsSet = false;
-
-        document.querySelector("a").onmouseover = event => {
-            addTextChanging(event);   
-        }
-
-        document.querySelector("h1").onmouseover = event => {
-            addTextChanging(event);   
-        }
-
-        const navLinks = document.querySelectorAll("#navbar-bottom a");
-
-        navLinks.forEach(link => {
-            link.addEventListener('mouseover', event => {
-                addTextChanging(event);
-            });
-        });
-
-        function addTextChanging(event)
-        {
-            if(intervalIsSet) return;
-
-            intervalIsSet = true;
-
-            let iterations = 0;
-
-            const interval = setInterval(() => {
-            event.target.innerText = event.target.innerText.split("")
-            .map((letter,index) => {
-                if(index <= iterations)
-                {
-                    return event.target.dataset.value[index];
-                }
-
-                return letters[Math.floor(Math.random() * 26)]
-            })
-            .join("");
-
-            iterations += 1/2;
-
-            if(iterations >= event.target.dataset.value.length)
-            {
-                clearInterval(interval);
-                intervalIsSet = false;
-                iterations = 0;
-            };
-
-            }, 30);
-
-            
-        }
-
-    </script>
-    
+    <script type="module" src="./document-script.js"></script>
 </body>
 
 </html>

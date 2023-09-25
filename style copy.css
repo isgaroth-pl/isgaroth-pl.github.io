@@ -1,5 +1,7 @@
 #background-canvas {
-    font-family: 'Space Mono', monospace;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
     margin: 0px;
@@ -12,47 +14,27 @@
 }
 
 body {
+    -webkit-font-smoothing: antialiased;
     background-color: transparent !important;
+}
+
+.font-exo {
+    font-family: 'Exo 2', sans-serif;
+}
+
+.font-space-mono {
+    font-family: 'Space Mono', monospace;
 }
 
 #main-content {
     position: relative;
     z-index: 1;
-    padding-bottom: 80px;
+    padding-bottom: 60px; /* Height of the nav bar */
 }
 
-.description-text {
-    margin-left: 25%;
-    margin-right: 25%;
-    display: flex;
-    justify-content: center;
-}
-
-.mg-top-big {
-    margin-top: 150px;
-}
-
-.mg-top-small {
-    margin-top: 50px;
-}
-
-.mg-bottom-big {
-    margin-bottom: 150px;
-}  
-
-.mg-bottom-small {
-    margin-bottom: 50px;
-}   
-
-h1{
-    margin: 0;
-}
-
-h2 {
-    margin: 0;
-}
-
-#projects, #contact {
+#projects,
+#contact {
+    background-color: rgba(95, 114, 167, 0.246);
     padding: 20px;
     border-radius: 8px;
 }
@@ -64,7 +46,7 @@ h2 {
     width: 100%;
     z-index: 2;
     align-items: center;
-    background-color: rgba(128, 128, 128, 0.902); 
+    background-color: rgba(128, 128, 128, 0.55); 
 }
 
 .flag-icon {
@@ -74,63 +56,15 @@ h2 {
 }
 
 .stylish {
-    text-transform: uppercase;
     font-family: 'Space Mono', monospace;
-    text-align: center;
+    text-transform: uppercase;
     letter-spacing: 0.05em;
     color: #ffffff;
 }
 
-.big-text {
-    font-size: 50px;
-    text-align: center;
+.text-style-two {
+    font-family: 'Exo 2', sans-serif;
 }
-
-.medium-text {
-    font-size: 35px;
-    text-align: center;
-}
-
-.small-text {
-    font-size: 15px;
-    text-align: center;
-}
-
-.portret-img {
-    align-content: center;
-    width: 25%;
-    height: 25%;
-}
-
-.project-img {
-    align-content: center;
-    width: 50%;
-    height: 50%;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.w-full {
-    width: 100%;
-}
-
-.bg {
-    background-color: #2d3748;
-}
-
-.flex {
-    display: flex;
-}
-
-.justify-around {
-    justify-content: space-around;
-}
-
-.border {
-    border: 1px solid white;
-}
-
-/* Keyframes and wobblingScaling remains the same */
 
 @keyframes wobbleScale {
     0% { transform: rotate(0) scale(1); }
@@ -177,7 +111,7 @@ h2 {
 }
 
 .wobblingScaling {
-    animation: wobbleScale 23.4s ease-in-out;
+    animation: wobbleScale 53.4s ease-in-out;
 }
 
 

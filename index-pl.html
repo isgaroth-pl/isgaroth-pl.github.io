@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Three.js Basics Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,700&family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="background-canvas">
+        <!-- This is the background div for the Three.js -->
+    </div>
+
+    <div id="main-content">
+        <div class="stylish text-center mt-48">
+            <h1 data-value="MACIEK WOLAK">WOLAK MACIEK</h1>
+            <p class="text-4xl">MOJA GITHUB STRONA</p>
+            <a id="buttonText" href="https://google.pl" class="border px-4 py-2 rounded-lg mt-6" data-value="VIEW WORK">VIEW WORK</a>
+        </div>
+
+        <div id="projects" class="mt-12">
+            <h2 data-value="My Projects">My Projects</h2>
+            <div class="mb-8">
+                <img src="./Assets/test-img.png" alt="Description of project 1" class="w-full mb-4">
+                <p>Description for project 1...</p>
+            </div>
+        </div>
+
+        <div id="contact" class="mt-12">
+            <h2 data-value="Contact Me">Contact Me</h2>
+            <p>You can reach me at: [your-email@example.com]</p>
+        </div>
+    </div>
+
+    <div id="navbar-bottom" class="bg-gray-800 p-4">
+        <nav class="flex justify-around">
+            <a href="#" data-value="HOME">HOME</a>
+            <a href="#projects" data-value="MY PROJECTS">MY PROJECTS</a>
+            <a href="#contact" data-value="CONTACT">CONTACT</a>
+            <button id="toggleZIndex">Hide Text</button>
+            <a href="index.html" title="Change to English">
+                <img src="./Assets/english-flag.png" 
+                alt="English Flag" class="flag-icon">
+            </a>
+        </nav>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+    <script type="module" src="./document-script.js"></script>
+</body>
+
+</html>
