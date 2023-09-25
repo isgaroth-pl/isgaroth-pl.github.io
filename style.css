@@ -102,10 +102,18 @@ h2 {
     height: 25%;
 }
 
-.project-img {
+.project-media {
     align-content: center;
     width: 50%;
     height: 50%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.project-media-small {
+    align-content: center;
+    width: 35%;
+    height: 35%;
     margin-top: 0;
     margin-bottom: 0;
 }
