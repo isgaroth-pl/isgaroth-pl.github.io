@@ -1,24 +1,24 @@
-const mainContent = document.getElementById("main-content");
-const toggleZIndexButton = document.getElementById("toggleZIndex");
+// const mainContent = document.getElementById("main-content");
+// const toggleZIndexButton = document.getElementById("toggleZIndex");
 
-function updateButtonText() {
-    if (getComputedStyle(mainContent).zIndex === "1") {
-        toggleZIndexButton.textContent = "Hide Text";
-    } else {
-        toggleZIndexButton.textContent = "Show Text";
-    }
-}
+// function updateButtonText() {
+//     if (getComputedStyle(mainContent).zIndex === "1") {
+//         toggleZIndexButton.textContent = "Hide Text";
+//     } else {
+//         toggleZIndexButton.textContent = "Show Text";
+//     }
+// }
 
-toggleZIndexButton.addEventListener('click', function() {
-    if (getComputedStyle(mainContent).zIndex === "1") {
-        mainContent.style.zIndex = "-2";
-    } else {
-        mainContent.style.zIndex = "1";
-    }
-    updateButtonText();
-});
+// toggleZIndexButton.addEventListener('click', function() {
+//     if (getComputedStyle(mainContent).zIndex === "1") {
+//         mainContent.style.zIndex = "-2";
+//     } else {
+//         mainContent.style.zIndex = "1";
+//     }
+//     updateButtonText();
+// });
 
-updateButtonText();
+// updateButtonText();
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 let intervalIsSet = false;

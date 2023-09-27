@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Three.js Basics Project</title>
+    <title>Maciek Wolak</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,700&family=Space+Mono&display=swap" rel="stylesheet">
@@ -19,35 +19,187 @@
     </div>
 
     <div id="main-content">
-        <div class="stylish text-center mt-48">
-            <h1 data-value="MACIEK WOLAK">WOLAK MACIEK</h1>
-            <p class="text-4xl">MOJA GITHUB STRONA</p>
-            <a id="buttonText" href="https://google.pl" class="border px-4 py-2 rounded-lg mt-6" data-value="VIEW WORK">VIEW WORK</a>
+        <div class="stylish text-center mg-top-small">
+            <h1 class="big-text" data-value="MOJE PORTFOLIO">MOJE PORTFOLIO</h1>
+            <img src="https://media.githubusercontent.com/media/isgaroth-pl/isgaroth-pl.github.io/fd3e5408e99ca083b546040a4406b30c3ec490ac/Assets/portret-img.png" 
+                alt="Portret" 
+                class="portret-img">  
+            <h2 class="medium-text" data-value="MACIEK WOLAK"> WOLAK MACIEK</h2>                 
         </div>
 
-        <div id="projects" class="mt-12">
-            <h2 data-value="My Projects">My Projects</h2>
-            <div class="mb-8">
-                <img src="./Assets/test-img.png" alt="Description of project 1" class="w-full mb-4">
-                <p>Description for project 1...</p>
+        <div id="skills" class="stylish mg-top-big">
+            <h1 data-value="Umiejętności">Umiejętności</h1>
+            <p style="white-space: pre-line; line-height: 40px;">
+                > C# and basics of JavaScript, C, C++
+                > Unity (Unity3D, PhysX, Netcode, UI, AI, Input etc)
+                > OOP, design patterns, coding standards
+                > Code optimization and debugging              
+                > Experience with VR projects 
+                > Basics of Web/WebGL (Three.js, Ammo.js, 8thWall WebAR)
+                > Basics of Blender
+                > Experience with version control (Git)
+                > Advanced level of English proficiency
+                > Ability and experience with teamwork
+            </p>
+        </div>
+
+        <div id="projects" class="mg-top-big stylish">
+            <h1 data-value="My Projects">My Projects!</h1>
+
+            <h2 class="mg-top-small stylish" 
+                data-value="Project: Virtual Galleries">Project: Virtual Galleries</h2>
+            <div>
+                <video autoplay loop muted playsinline class="project-media-small">
+                    <source src="https://github.com/isgaroth-pl/isgaroth-pl.github.io/raw/main/Assets/project3.webm"
+                        type="video/webm">
+                    Your browser does not support the video tag.
+                </video> 
+                <video autoplay loop muted playsinline style="width: 20%;">
+                    <source src="https://github.com/isgaroth-pl/isgaroth-pl.github.io/raw/main/Assets/test-video.webm"
+                        type="video/webm">
+                    Your browser does not support the video tag.
+                </video> 
+                <p class="description-text mg-bottom-big">
+                    Developed interactive WebGL applications in Unity, 
+                    (including virtual art galleries for clients such as TikTok, Meta, and Snapchat)
+                    Created VR applications for Oculus Quest 
+                    (interactive virtual galleries)</p>
             </div>
+
+            <h2 class="mg-top-small stylish" 
+                data-value="Project: MonsterTrucki">Project: MonsterTrucki</h2>
+            <div>
+                <video autoplay loop muted playsinline class="project-media-small">
+                    <source src="https://github.com/isgaroth-pl/isgaroth-pl.github.io/raw/main/Assets/project6.1.webm"
+                        type="video/webm">
+                    Your browser does not support the video tag.
+                </video> 
+                <video autoplay loop muted playsinline class="project-media-small">
+                    <source src="https://github.com/isgaroth-pl/isgaroth-pl.github.io/raw/main/Assets/project6.2.webm"
+                        type="video/webm">
+                    Your browser does not support the video tag.
+                </video> 
+                <p class="description-text mg-bottom-big">
+                    Contributed to the development of a game with local multiplayer for Nintendo Switch.
+                    (Created gameplay mechanics, including Monster Trucks control, split-screen multiplayer,
+                    physics interactions and UI logic for the game)
+                </p>
+            </div>
+
+            <h2 class="mg-top-small stylish" 
+                data-value="Project: WebAR">Project: WebAR</h2>
+            <div>
+                <video autoplay loop muted playsinline class="project-media-small" style="width: 10%;">
+                    <source src="https://github.com/isgaroth-pl/isgaroth-pl.github.io/raw/main/Assets/project9.mp4"
+                        type="video/webm">
+                    Your browser does not support the video tag.
+                </video> 
+                <video autoplay loop muted playsinline class="project-media-small">
+                    <source src="https://github.com/isgaroth-pl/isgaroth-pl.github.io/raw/main/Assets/project9.1.webm"
+                        type="video/webm">
+                    Your browser does not support the video tag.
+                </video> 
+                <p class="description-text mg-bottom-big">
+                    Designed and built WebAR applications
+                    (using 8thWall and pure JavaScript, including a simple game
+                    involving mural scanning for Jack Daniel's and an AR label scanning
+                    application for Prosecco)
+                </p>
+            </div>
+
+            <h2 class="mg-top-small stylish" 
+                data-value="Project: Small ones">Project: Small ones</h2>
+            <div>
+                <video autoplay loop muted playsinline class="project-media-small" style="width: 25%;">
+                    <source src="https://github.com/isgaroth-pl/isgaroth-pl.github.io/raw/main/Assets/project7.webm"
+                        type="video/webm">
+                    Your browser does not support the video tag.
+                </video> 
+                <video autoplay loop muted playsinline class="project-media-small" style="width: 25%;">
+                    <source src="https://github.com/isgaroth-pl/isgaroth-pl.github.io/raw/main/Assets/project5.mp4"
+                        type="video/webm">
+                    Your browser does not support the video tag.
+                </video> 
+                <video autoplay loop muted playsinline class="project-media-small" style="width: 25%;">
+                    <source src="https://github.com/isgaroth-pl/isgaroth-pl.github.io/raw/main/Assets/project1.webm"
+                        type="video/webm">
+                    Your browser does not support the video tag.
+                </video> 
+                <p class="description-text mg-bottom-big">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                    in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                </p>
+            </div>
+
+            <h2 class="mg-top-small stylish" 
+                data-value="Project: WebRagdoll">Project: WebRagdoll</h2>
+            <div>
+                <video autoplay loop muted playsinline class="project-media-small">
+                    <source src="https://github.com/isgaroth-pl/isgaroth-pl.github.io/raw/main/Assets/project8.webm"
+                        type="video/webm">
+                    Your browser does not support the video tag.
+                </video> 
+                <video autoplay loop muted playsinline class="project-media-small">
+                    <source src="https://github.com/isgaroth-pl/isgaroth-pl.github.io/raw/main/Assets/project8.1.webm"
+                        type="video/webm">
+                    Your browser does not support the video tag.
+                </video> 
+                <p class="description-text mg-bottom-big">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                    in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                </p>
+            </div>
+
+            <h2 class="mg-top-small stylish" 
+                data-value="Project: C-Mario">Project: C-Mario</h2>
+            <div>
+                <video autoplay loop muted playsinline class="project-media-small">
+                    <source src="https://github.com/isgaroth-pl/isgaroth-pl.github.io/raw/main/Assets/project0.webm"
+                        type="video/webm">
+                    Your browser does not support the video tag.
+                </video> 
+                <p class="description-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                    in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                </p>
+            </div>
+
         </div>
 
-        <div id="contact" class="mt-12">
+        <div id="contact" class="mg-top-small stylish">
             <h2 data-value="Contact Me">Contact Me</h2>
-            <p>You can reach me at: [your-email@example.com]</p>
+            <p style="white-space: pre-line; line-height: 40px;"> 
+                Email: isgaroth@op.pl
+                Phone: +48 728 957 817
+            </p>
         </div>
     </div>
 
-    <div id="navbar-bottom" class="bg-gray-800 p-4">
+    <div id="navbar-bottom" class="bg p-4">
         <nav class="flex justify-around">
-            <a href="#" data-value="HOME">HOME</a>
-            <a href="#projects" data-value="MY PROJECTS">MY PROJECTS</a>
-            <a href="#contact" data-value="CONTACT">CONTACT</a>
+            <a href="#" class="stylish" data-value="HOME">HOME</a>
+            <a href="#skills" class="stylish" data-value="SKILLS">SKILLS</a>
+            <a href="#projects" class="stylish" data-value="MY PROJECTS">MY PROJECTS</a>
+            <a href="#contact" class="stylish" data-value="CONTACT">CONTACT</a>
             <button id="toggleZIndex">Hide Text</button>
             <a href="index.html" title="Change to English">
-                <img src="./Assets/english-flag.png" 
-                alt="English Flag" class="flag-icon">
+                <img src="https://github.com/isgaroth-pl/isgaroth-pl.github.io/raw/main/Assets/english-flag.png" 
+                    alt="Polish Flag" class="flag-icon">
             </a>
         </nav>
     </div>
