@@ -90,7 +90,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //#region Enlarge Gifs/img on click
 document.addEventListener("click", function(event) {
-    if (event.target.tagName === "VIDEO" || event.target.tagName === "IMG") {
+    if ((event.target.tagName === "VIDEO" || event.target.tagName === "IMG") 
+            && !event.target.classList.contains("no-enlarge")) {
         if (event.target.classList.contains("enlarged")) {
             event.target.classList.remove("enlarged");
             event.target.style.width = ""; // Return to original width
@@ -102,5 +103,6 @@ document.addEventListener("click", function(event) {
         }
     }
 });
+
 //#endregion
 
