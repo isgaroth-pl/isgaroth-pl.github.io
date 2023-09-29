@@ -20,6 +20,7 @@
 
 // updateButtonText();
 
+//#region Text-Changing Effect
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 let intervalIsSet = false;
 
@@ -54,13 +55,52 @@ function addTextChanging(event) {
         }
     }, 30);
 }
+//#endregion
 
-document.querySelectorAll("img").forEach(img => {
-    img.addEventListener('click', event => {
-        if (!event.target.classList.contains('wobblingScaling')) {
-            event.target.classList.add('wobblingScaling');
-        } else {
-            event.target.classList.remove('wobblingScaling');
-        }
+
+// document.querySelectorAll("img").forEach(img => {
+//     img.addEventListener('click', event => {
+//         if (!event.target.classList.contains('wobblingScaling')) {
+//             event.target.classList.add('wobblingScaling');
+//         } else {
+//             event.target.classList.remove('wobblingScaling');
+//         }
+//     });
+// });
+
+//#region Gifs to Img on error
+document.addEventListener("DOMContentLoaded", function() {
+    const videos = document.querySelectorAll("video");
+    
+    videos.forEach(video => {
+        video.onerror = function() {
+            const img = document.createElement("img");
+            img.classList.add("project-media");
+            const videoSrc = video.querySelector("source").src;
+            if (videoSrc.endsWith(".webm")) {
+                img.src = videoSrc.replace(".webm", ".png");
+            } else if (videoSrc.endsWith(".mp4")) {
+                img.src = videoSrc.replace(".mp4", ".png");
+            }
+            video.replaceWith(img);
+        };
     });
 });
+//#endregion
+
+//#region Enlarge Gifs/img on click
+document.addEventListener("click", function(event) {
+    if (event.target.tagName === "VIDEO" || event.target.tagName === "IMG") {
+        if (event.target.classList.contains("enlarged")) {
+            event.target.classList.remove("enlarged");
+            event.target.style.width = ""; // Return to original width
+            event.target.style.height = ""; // Return to original height
+        } else {
+            event.target.classList.add("enlarged");
+            event.target.style.width = "80vw";
+            event.target.style.height = "80vh";
+        }
+    }
+});
+//#endregion
+

@@ -137,6 +137,18 @@ h1, h2{
     border: 1px solid white;
 }
 
+.small-media-width {
+    width: 10%;
+}
+
+.enlarged {
+    position: fixed;
+    bottom: 10vh;
+    left: 10vw;
+    z-index: 1000; 
+}
+
+
 /* Keyframes and wobblingScaling remains the same */
 
 @keyframes wobbleScale {
@@ -185,6 +197,38 @@ h1, h2{
 
 .wobblingScaling {
     animation: wobbleScale 23.4s ease-in-out;
+}
+
+@media (max-width: 600px) {
+    .big-text {
+        font-size: 30px;
+    }
+
+    .medium-text {
+        font-size: 20px;
+    }
+
+    .small-text {
+        font-size: 12px;
+    }
+
+    .portret-img {
+        width: 50%;
+        height: 50%;
+    }
+
+    .project-media, .project-media-small {
+        align-content: center;
+        width: 95%;
+        height: auto; /* Maintain aspect ratio */
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .description-text {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 }
 
 
