@@ -7,7 +7,7 @@ const guiWorld = {
 };
 
 const pointer = new THREE.Vector2();
-const defaultColor = new THREE.Vector3(0.1, 0.3, 0.4);
+const defaultColor = new THREE.Vector3(0.5, 0.6, 0.7);
 const highlightColor = new THREE.Vector3(0.1, 0.5, 1);
 const gainLerpFactor = 0.15;  // factor for gaining color; adjust this for faster/slower color transition
 const decayLerpFactor = 0.005;  // factor for decaying color; adjust this for faster/slower color transition
@@ -34,8 +34,8 @@ function initialize() {
   
   createScenePlane();
 
-  sceneFrontLight = createDirectionalLight(0, 0.4, 1);
-  sceneBackLight = createDirectionalLight(0, 0.3, -1);
+  //sceneFrontLight = createDirectionalLight(0, 0.4, 1);
+  //sceneBackLight = createDirectionalLight(0, 0.3, -1);
   const ambientLight = new THREE.AmbientLight(0x404040, 1);
 
   scene.add(sceneFrontLight, sceneBackLight, ambientLight);
@@ -46,6 +46,7 @@ function initialize() {
 }
 
 function animate() {
+
   frameCounter += 0.01;
 
   animateActiveVertices();
@@ -70,7 +71,7 @@ function createDirectionalLight(x, y, z) {
 function createScenePlane() {
   const { width, height, widthSegments, heightSegments } = guiWorld.plane;
   const planeGeometry = new THREE.PlaneGeometry(width, height, widthSegments, heightSegments);
-  const material = new THREE.MeshPhongMaterial({
+  const material = new THREE.MeshBasicMaterial({
     wireframe: true,
     side: THREE.DoubleSide,
     flatShading: THREE.FlatShading,
@@ -84,7 +85,7 @@ function createScenePlane() {
 }
 
 function randomizeComponent(component) {
-  const variance = 0.2; // Adjust as needed. This will randomize color up to ±5% of its original value.
+  const variance = 0.15; // Adjust as needed. This will randomize color up to ±5% of its original value.
   return component + (Math.random() * variance - variance / 2);
 }
 
