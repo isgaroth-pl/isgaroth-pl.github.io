@@ -7,7 +7,7 @@ const guiWorld = {
 };
 
 const pointer = new THREE.Vector2();
-const defaultColor = new THREE.Vector3(0.5, 0.6, 0.7);
+const defaultColor = new THREE.Vector3(0.2, 0.3, 0.4);
 const highlightColor = new THREE.Vector3(0.1, 0.5, 1);
 const gainLerpFactor = 0.15;  // factor for gaining color; adjust this for faster/slower color transition
 const decayLerpFactor = 0.005;  // factor for decaying color; adjust this for faster/slower color transition
